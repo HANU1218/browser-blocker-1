@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.browserlocker.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.browserlocker.app"
+        minSdk 26          // Android 8.0+ (Device Owner setPackagesSuspended stable here)
+        targetSdk 34
+        versionCode 1
+        versionName "1.0-test"   // Test phase — still uninstallable
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+        }
+        debug {
+            debuggable true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // No third-party dependencies needed — pure Android framework APIs
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This file declares which Device Admin policies our app uses.
+    Needed for setPackagesSuspended() to work (Device Owner only).
+-->
+<device-admin>
+    <uses-policies>
+        <force-lock />
+        <wipe-data />
+    </uses-policies>
+</device-admin>
